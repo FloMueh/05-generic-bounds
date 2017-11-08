@@ -11,61 +11,60 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
  */
 public class Person {
 
-	private String firstName;
-	private String lastName;
+    private String firstName;
+    private String lastName;
 
-	public Person() {
-	}
+    public Person() {
+    }
 
-	public Person(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
 
-		if (!(o instanceof Person)) return false;
+        if (!(o instanceof Person)) return false;
 
-		Person person = (Person) o;
+        Person person = (Person) o;
 
-		return new EqualsBuilder()
-				.append(getFirstName(), person.getFirstName())
-				.append(getLastName(), person.getLastName())
-				.isEquals();
-	}
+        return new EqualsBuilder()
+                .append(getFirstName(), person.getFirstName())
+                .append(getLastName(), person.getLastName())
+                .isEquals();
+    }
 
-	@Override
-	public int hashCode() {
-		return new HashCodeBuilder(17, 37)
-				.append(getFirstName())
-				.append(getLastName())
-				.toHashCode();
-	}
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+                .append(getFirstName())
+                .append(getLastName())
+                .toHashCode();
+    }
 
-	@Override
-	public String toString() {
-		return new ToStringBuilder(this)
-				.append("firstName", firstName)
-				.append("lastName", lastName)
-				.toString();
-	}
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("firstName", firstName)
+                .append("lastName", lastName)
+                .toString();
+    }
 }
-
